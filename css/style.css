@@ -16,7 +16,7 @@ main{
     min-width: 375px;
     min-height: 500px;
     width: 50%;
-    height: 500px;
+    height: 750px;
     border: 1px solid #000;
     position: relative;
     overflow: hidden;
@@ -43,17 +43,28 @@ main{
 }
 .fundo{
     width: 100%;
-    height: 500px;
+    height: 750px;
+}
+.pulo{
+    position: absolute;
+    width: 80px;
+    bottom: 50px;
 }
 .crabred{
     position: absolute;
     width: 100px;
     bottom: 50px;
     right: -130px;
-    animation: crabred-animation 2s linear infinite;
+    animation: crabred-animation 3s linear infinite;
     
 }
-
+.moeda{
+    position: absolute;
+    width: 50px;
+    bottom: 150px;
+    right: 150px;
+    animation: moeda-transition 2s linear infinite;
+}
 footer{
     padding: 20px;
 }
@@ -61,27 +72,36 @@ footer{
 @keyframes sonic-jump{
     0%{
         bottom: 50px;
+    } 
+    10%{
+        bottom: 100px;
+    }
+    20%{
+        bottom: 150px;
     }
     30%{
-        bottom: 150px;
+        bottom: 180px;
     }
     40%{
-        bottom: 150px;
+        bottom: 200px;
     }
     50%{
-        bottom: 150px;
+        bottom: 220px;
     }
     60%{
-        bottom: 150px;
+        bottom: 220px;
     }
     70%{
-        bottom: 150px;
+        bottom: 200px;
     }
     80%{
-        bottom: 150px;
+        bottom: 180px;
     }
     90%{
         bottom: 150px;
+    }
+    95%{
+        bottom: 100px;
     }
     100%{
         bottom: 50px;
@@ -96,4 +116,12 @@ footer{
     to{
         right: 100%;
     } 
+}
+@keyframes moeda-transition {
+ from{
+    right: 0;
+ }  
+ to{
+    right: 100%;
+ } 
 }
